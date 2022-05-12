@@ -1,3 +1,4 @@
+from ast import Lambda
 import random
 lista =[]
 def listDiccionarios():
@@ -6,7 +7,13 @@ def listDiccionarios():
         
         lista.append({'id':i,'edad':random.randint(1, 100)})
         i=i+1
-        
-listDiccionarios()
-print(lista)        
-        
+    
+    return lista    
+
+      
+def ordenarLista(lista):
+    lista = sorted(lista, key=lambda p: p['edad'])
+    return lista
+ 
+print(listDiccionarios())
+print(ordenarLista(lista))        
