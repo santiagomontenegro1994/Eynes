@@ -7,9 +7,15 @@ import numpy as np
 
 matriz= 2 * np.random.random([5,5]) #Creo la matriz de 5 x 5 con numero aleatoreos(lo multiplico x 100 por que por defecto genera numeros entre 0 y 1)
 matriz= matriz.astype(int) #convierto el contenido de la matriz en numeros enteros
-print(matriz)
+print(matriz) #hago un print de la matriz
 
-def sec4Numeros(matriz):
+
+
+#------------------------------------EMPIEZO CON EL METODO-------------------------
+
+
+
+def sec4Numeros(matriz): # metodo para encontrar secuencias de 4 o mas numeros iguales
     
     respuesta='sin secuencia'
     posicionInicial=NULL
@@ -26,7 +32,6 @@ def sec4Numeros(matriz):
         i=0 #auxiliar para saber el subindice de la matriz
         j=j+1
         
-        print(tuplaAux)
                   
         for x in tuplaAux[2]: #recorro la lista de cantidad de veces que se repite un elemento
             i=i+1
@@ -37,20 +42,18 @@ def sec4Numeros(matriz):
                 if k<1:  
                     posicionInicial= str(tuplaAux[1][i-1]) + ' ' + str(j-1)
                     posicionFinal=str(tuplaAux[1][i-1] + x-1) + ' ' + str(j-1)
-                    print(posicionInicial)
-                    print(posicionFinal)
                     k=k+1 #Cambio auxiliar para saber que ya se encontro una secuencia
                     respuesta='Secuencia encontrada en posiciones: \n' + posicionInicial + ' , ' + posicionFinal    
                 else:
                     posicionInicial= str(tuplaAux[1][i-1]) + ' ' + str(j-1)
                     posicionFinal=str(tuplaAux[1][i-1] + x-1) + ' ' + str(j-1)
-                    print(posicionInicial)
-                    print(posicionFinal)
                     respuesta= respuesta + '\n' + posicionInicial + ' , ' + posicionFinal
                     
+                    
 #-------------------ahora hago lo mismo para revisar cada fila de la matriz---------------------# 
+
                
-    #primero reseteo los contadores
+    #primero reseteo el contador
     j=0 #auxiliar para saber el indice de la matriz 
     
     for l in range(len(matriz[:,1])): #recorro cada una de las listas de la matriz
@@ -62,7 +65,6 @@ def sec4Numeros(matriz):
         i=0 #auxiliar para saber el subindice de la matriz
         j=j+1
         
-        print(tuplaAux)
                   
         for x in tuplaAux[2]: #recorro la lista de cantidad de veces que se repite un elemento
             i=i+1
@@ -73,15 +75,13 @@ def sec4Numeros(matriz):
                 if k<1:  
                     posicionInicial= str(j-1) + ' ' + str(tuplaAux[1][i-1])
                     posicionFinal=str(j-1) + ' ' + str(tuplaAux[1][i-1] + x-1)  
-                    print(posicionInicial)
-                    print(posicionFinal)
+
                     k=k+1 #Cambio auxiliar para saber que ya se encontro una secuencia
                     respuesta='Secuencia encontrada en posiciones: \n' + posicionInicial + ' , ' + posicionFinal    
                 else:
                     posicionInicial= str(j-1) + ' ' + str(tuplaAux[1][i-1])
                     posicionFinal=str(j-1) + ' ' + str(tuplaAux[1][i-1] + x-1)
-                    print(posicionInicial)
-                    print(posicionFinal)
+
                     respuesta= respuesta + '\n' + posicionInicial + ' , ' + posicionFinal
     
     
@@ -89,9 +89,11 @@ def sec4Numeros(matriz):
     
     
     
-    return print(respuesta)     
+    return print(respuesta) 
+
+    
                 
-print(sec4Numeros(matriz))        
+print(sec4Numeros(matriz))    #hago un print del metodo pasandole por parametro la matriz     
     
               
         
