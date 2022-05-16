@@ -43,3 +43,9 @@ class Circulo: # Defino la clase Circulo
                             
     
         
+<<<<<<< HEAD
+=======
+mi = Circulo(10)
+mi1 = mi*10                   
+print(mi1)
+>>>>>>> Clases
