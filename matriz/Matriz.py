@@ -93,7 +93,7 @@ def sec4Numeros(matriz): # metodo para encontrar secuencias de 4 o mas numeros i
 
     
                 
-print(sec4Numeros(matriz))    #hago un print del metodo pasandole por parametro la matriz     
+print(sec4Numeros(matriz)) #hago un print del metodo pasandole por parametro la matriz     
     
               
         
